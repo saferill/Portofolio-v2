@@ -1,0 +1,13 @@
+<section class="space-y-6" aria-labelledby="project-demo-heading" id="demo-video">
+ <div class="space-y-3">
+  <h2 class="text-xs font-bold text-foreground uppercase tracking-widest" id="project-demo-heading">$PROJECT_TITLE Demo Video</h2>
+  <p class="text-sm leading-relaxed text-muted">Watch $PROJECT_TITLE in action right here. Press play to start the demo.</p>
+ </div>
+ <div class="pf-demo-frame rounded-xl sm:rounded-2xl overflow-hidden border border-border/40 bg-surface-nested">
+  <video poster="/images/word-academic-demo-poster.jpg" controls playsinline preload="metadata" aria-label="$PROJECT_TITLE demo video">
+   <source src="$DEMO_SRC" type="video/mp4"/>
+   Your browser does not support HTML5 video. <a href="$DEMO_VIEW_URL">Watch on Google Drive</a>.
+  </video>
+ </div>
+ <p class="text-sm leading-relaxed text-muted">If the video does not play, <a class="text-foreground underline" href="$DEMO_VIEW_URL" target="_blank" rel="noopener noreferrer">open the video in Google Drive ↗</a>.</p>
+</section>

@@ -1,0 +1,282 @@
+{
+  "name": "Moch. Syafril Ramadhani",
+  "shortName": "Syafril",
+  "handle": "safe_rill",
+  "location": "Jember, Jawa Timur, Indonesia",
+  "email": "mochsyafrilramadhani5@gmail.com",
+  "instagram": "https://www.instagram.com/safe_rill/",
+  "whatsapp": "https://wa.me/6285143001281",
+  "phoneDisplay": "0851-4300-1281",
+  "university": "Universitas Nahdlatul Ulama Yogyakarta",
+  "major": "Akuntansi",
+  "school": "SMK Nurul Jadid",
+  "schoolMajor": "Multimedia",
+  "skills": [
+    "Microsoft Word",
+    "Microsoft Excel",
+    "Canva",
+    "CorelDRAW",
+    "CapCut"
+  ],
+  "project": {
+    "id": "word-academic",
+    "title": "Word Academic",
+    "slug": "word-academic",
+    "category": "Produktivitas",
+    "platform": "Microsoft Word · Windows",
+    "url": "https://lynk.id/wordacademic",
+    "description": "Add-in Microsoft Word untuk Windows yang membantu mahasiswa menata format tugas dan skripsi.",
+    "features": [
+      "Menerapkan heading dan subheading",
+      "Membuat daftar isi",
+      "Menambahkan nomor halaman",
+      "Menjalankan tindakan format yang didukung dalam satu klik"
+    ],
+    "status": "available",
+    "filters": [
+      "desktop"
+    ],
+    "thumbnail": "/images/word-academic-1.svg",
+    "gallery": [
+      "/images/word-academic-1.svg",
+      "/images/word-academic-2.svg",
+      "/images/word-academic-3.svg"
+    ],
+    "featured": true,
+    "visualNote": "Identitas produk dan ilustrasi fitur; bukan screenshot antarmuka aplikasi.",
+    "need": "Membantu mahasiswa menata format tugas dan skripsi dengan lebih praktis.",
+    "access": "Tersedia untuk Microsoft Word di Windows. Lihat halaman produk untuk pilihan akses dan kompatibilitas terbaru; tonton demo di bawah untuk alur penggunaannya.",
+    "demo": {
+      "provider": "local",
+      "fileId": "1AaZ--NhLMk_jaarbTfarFwx330lF56YF",
+      "url": "https://drive.google.com/file/d/1AaZ--NhLMk_jaarbTfarFwx330lF56YF/view",
+      "src": "/videos/word-academic-demo-v2.mp4"
+    }
+  },
+  "projects": [
+    {
+      "id": "word-academic",
+      "title": "Word Academic",
+      "slug": "word-academic",
+      "category": "Produktivitas",
+      "platform": "Microsoft Word · Windows",
+      "url": "https://lynk.id/wordacademic",
+      "description": "Add-in Microsoft Word untuk Windows yang membantu mahasiswa menata format tugas dan skripsi.",
+      "features": [
+        "Menerapkan heading dan subheading",
+        "Membuat daftar isi",
+        "Menambahkan nomor halaman",
+        "Menjalankan tindakan format yang didukung dalam satu klik"
+      ],
+      "status": "available",
+      "filters": [
+        "desktop"
+      ],
+      "thumbnail": "/images/word-academic-1.svg",
+      "gallery": [
+        "/images/word-academic-1.svg",
+        "/images/word-academic-2.svg",
+        "/images/word-academic-3.svg"
+      ],
+      "featured": true,
+      "visualNote": "Identitas produk dan ilustrasi fitur; bukan screenshot antarmuka aplikasi.",
+      "need": "Membantu mahasiswa menata format tugas dan skripsi dengan lebih praktis.",
+      "access": "Tersedia untuk Microsoft Word di Windows. Lihat halaman produk untuk pilihan akses dan kompatibilitas terbaru; tonton demo di bawah untuk alur penggunaannya.",
+      "demo": {
+        "provider": "local",
+        "fileId": "1AaZ--NhLMk_jaarbTfarFwx330lF56YF",
+        "url": "https://drive.google.com/file/d/1AaZ--NhLMk_jaarbTfarFwx330lF56YF/view",
+        "src": "/videos/word-academic-demo-v2.mp4"
+      }
+    },
+    {
+      "id": "tempmail-pro",
+      "slug": "tempmail-pro",
+      "title": "TempMail Pro",
+      "category": "Utilitas",
+      "platform": "Web",
+      "url": "https://mailtemppro.netlify.app/",
+      "description": "Aplikasi web email sementara untuk menerima pesan tanpa menggunakan alamat email utama.",
+      "features": [
+        "Mendapatkan alamat email sementara",
+        "Menyalin alamat untuk kebutuhan yang sesuai",
+        "Membaca pesan masuk melalui inbox",
+        "Menyegarkan inbox, termasuk pilihan penyegaran otomatis"
+      ],
+      "filters": [
+        "web"
+      ],
+      "status": "available",
+      "thumbnail": "/images/projects/tempmail-pro.webp",
+      "gallery": [
+        "/images/projects/tempmail-pro.webp"
+      ],
+      "featured": false,
+      "visualNote": "Tangkapan layar situs publik.",
+      "need": "Menyediakan alamat email sementara untuk kebutuhan yang tidak memerlukan email utama.",
+      "access": "Sudah tersedia di web. Alamat sementara dapat kedaluwarsa atau tidak bisa diakses kembali. Jangan gunakan untuk perbankan, akun penting, atau pesan yang perlu disimpan."
+    },
+    {
+      "id": "coda",
+      "slug": "coda",
+      "title": "Coda",
+      "category": "Musik",
+      "platform": "Web",
+      "url": "https://codamusic.vercel.app/",
+      "description": "Aplikasi musik berbasis web untuk menemukan lagu dan mendengarkannya langsung melalui browser.",
+      "features": [
+        "Menelusuri musik melalui Discover",
+        "Memilih lagu dari Speed Dial dan Quick Picks",
+        "Menjelajahi pilihan playlist",
+        "Memutar musik langsung di aplikasi web"
+      ],
+      "filters": [
+        "web"
+      ],
+      "status": "available",
+      "thumbnail": "/images/projects/coda.webp",
+      "gallery": [
+        "/images/projects/coda.webp"
+      ],
+      "featured": true,
+      "visualNote": "Tangkapan layar situs publik.",
+      "need": "Menemukan dan mendengarkan musik melalui browser.",
+      "access": "Sudah tersedia sebagai aplikasi web. Buka Coda untuk mencobanya; ketersediaan musik bergantung pada layanan sumber. HiFi adalah proyek Android dan desktop terpisah yang masih dikembangkan."
+    },
+    {
+      "id": "safevideos",
+      "slug": "safevideos",
+      "title": "SafeVideos",
+      "category": "Utilitas",
+      "platform": "Web",
+      "url": "https://safevideos.vercel.app/",
+      "description": "Alat berbasis web untuk mengunduh video dan audio dari platform yang didukung melalui tautan media.",
+      "features": [
+        "Memasukkan atau menempelkan tautan media",
+        "Mengunduh video atau audio jika didukung oleh sumber",
+        "Menggunakan satu antarmuka web untuk beberapa platform yang didukung"
+      ],
+      "filters": [
+        "web"
+      ],
+      "status": "available",
+      "thumbnail": "/images/projects/safevideos.webp",
+      "gallery": [
+        "/images/projects/safevideos.webp"
+      ],
+      "featured": true,
+      "visualNote": "Tangkapan layar situs publik.",
+      "need": "Menyimpan media dari tautan. Gunakan hanya untuk konten yang berhak diunduh.",
+      "access": "Sudah tersedia di web. Sumber yang didukung dan pilihan unduhan dapat berbeda; bukan berarti semua platform didukung. Hormati kepemilikan konten dan izin pengunduhannya."
+    },
+    {
+      "id": "hifi",
+      "slug": "hifi",
+      "title": "HiFi",
+      "category": "Musik",
+      "platform": "Android · Desktop",
+      "url": null,
+      "description": "Aplikasi musik khusus untuk Android dan desktop yang masih dalam pengembangan.",
+      "features": [
+        "Antarmuka pencarian lagu dan permintaan data musik",
+        "Layar pemutar dengan kontrol putar/jeda dan seek",
+        "Pengelolaan antrean, shuffle, dan logika kelanjutan radio",
+        "Integrasi stream audio native Android"
+      ],
+      "filters": [
+        "android",
+        "desktop"
+      ],
+      "status": "development",
+      "thumbnail": "/images/projects/hifi.svg",
+      "gallery": [
+        "/images/projects/hifi.svg"
+      ],
+      "featured": false,
+      "visualNote": "Visual identitas sementara, bukan logo resmi atau screenshot aplikasi.",
+      "need": "Mengembangkan pengalaman mendengarkan musik di Android dan desktop.",
+      "access": "Masih dalam pengembangan. Fitur yang dicantumkan terlihat pada kode yang diperiksa, bukan klaim rilis yang sudah diuji sepenuhnya. Belum ada unduhan publik di portfolio ini."
+    },
+    {
+      "id": "linko",
+      "slug": "linko",
+      "title": "Linko",
+      "category": "Berbagi file",
+      "platform": "Android ↔ Windows",
+      "url": null,
+      "description": "Proyek berbagi file melalui jaringan lokal untuk Android dan Windows yang masih dalam pengembangan.",
+      "features": [
+        "Pencarian dan pemilihan perangkat terdekat",
+        "Alur pemilihan, pengiriman, dan penerimaan file",
+        "Progress transfer dan penanganan pembatalan",
+        "Riwayat transfer, pengaturan, dan antarmuka berbagi melalui web"
+      ],
+      "filters": [
+        "android",
+        "desktop"
+      ],
+      "status": "development",
+      "thumbnail": "/images/projects/linko.svg",
+      "gallery": [
+        "/images/projects/linko.svg"
+      ],
+      "featured": false,
+      "visualNote": "Visual identitas sementara, bukan logo resmi atau screenshot aplikasi.",
+      "need": "Memudahkan pertukaran file antara perangkat Android dan Windows.",
+      "access": "Masih dalam pengembangan. Alur yang dicantumkan terlihat pada kode yang diperiksa. Portfolio ini belum menyediakan unduhan rilis atau mengklaim performa transfer yang sudah divalidasi."
+    },
+    {
+      "id": "alhuda",
+      "slug": "alhuda",
+      "title": "AlHuda",
+      "category": "Ibadah",
+      "platform": "Android",
+      "url": null,
+      "description": "Aplikasi pengingat salat Android yang masih dikembangkan, dengan pembaca Al-Qur’an sebagai bagian dari rencana fiturnya.",
+      "features": [
+        "Perhitungan jadwal salat berdasarkan lokasi dan pengaturan metode",
+        "Kode penjadwalan alarm dan pemutaran audio Adzan",
+        "Pemilihan lokasi, lokasi tersimpan, dan pengaturan aplikasi",
+        "Layar alarm mendatang dan menu navigasi"
+      ],
+      "filters": [
+        "android"
+      ],
+      "status": "development",
+      "thumbnail": "/images/projects/alhuda.svg",
+      "gallery": [
+        "/images/projects/alhuda.svg"
+      ],
+      "featured": false,
+      "visualNote": "Visual identitas sementara, bukan logo resmi atau screenshot aplikasi.",
+      "need": "Menghadirkan Adzan dan Al-Qur’an dalam aplikasi Android.",
+      "access": "Masih dalam pengembangan, dengan pengingat salat sebagai fokus saat ini. Pembaca Al-Qur’an masih direncanakan; menu Kiblat, penghitung Qada, dan tampilan bulanan masih berupa placeholder pada kode yang diperiksa."
+    }
+  ],
+  "experience": [
+    {
+      "type": "internship",
+      "role": "Peserta PKL — Administrasi",
+      "organization": "Universitas Muhammadiyah Jember",
+      "period": "Desember 2022 – Maret 2023",
+      "details": [
+        "Membantu kebutuhan dan permintaan administrasi mahasiswa.",
+        "Membantu komunikasi terkait keperluan mahasiswa kepada dosen.",
+        "Membantu pembuatan surat dan tugas administrasi mahasiswa lainnya."
+      ]
+    },
+    {
+      "type": "organization",
+      "role": "Medinfo (Media dan Informasi)",
+      "organization": "Himpunan Mahasiswa Akuntansi · Universitas Nahdlatul Ulama Yogyakarta",
+      "period": "Aktif · Periode 2026/2027",
+      "details": [
+        "Aktif dalam bidang media dan informasi himpunan."
+      ]
+    }
+  ],
+  "cv": {
+    "pdf": "/documents/syafril-cv-id.pdf",
+    "docx": "/documents/syafril-cv-id.docx"
+  }
+}

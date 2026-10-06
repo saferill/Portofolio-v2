@@ -1,0 +1,15 @@
+{
+  "name": "syafril-portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "build:pages": "python build_site.py"
+  },
+  "dependencies": {
+    "ytmusic-api": "5.3.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,2 @@
+# Audio extraction backend. No account cookies or credentials required.
+yt-dlp==2026.8.19

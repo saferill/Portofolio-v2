@@ -1,0 +1,178 @@
+{
+  "word-academic": {
+    "story": {
+      "en": "Formatting an academic document can mean repeating the same steps across many pages. Word Academic brings common formatting tasks into a simpler workflow, so students can spend more time on the content of their work.",
+      "id": "Menata dokumen akademik sering berarti mengulang langkah yang sama di banyak halaman. Word Academic menyederhanakan pekerjaan format yang umum agar mahasiswa bisa lebih fokus pada isi tulisannya."
+    },
+    "focus": {
+      "en": "I develop Word Academic as a personal project focused on academic document formatting in Microsoft Word. The demo below shows how the add-in is used.",
+      "id": "Saya mengembangkan Word Academic sebagai proyek personal yang berfokus pada penataan dokumen akademik di Microsoft Word. Demo di bawah memperlihatkan penggunaan add-in ini."
+    },
+    "statusText": {
+      "en": "Available for Microsoft Word on Windows. Visit the product page for current access options and compatibility details; watch the demo below for the workflow.",
+      "id": "Tersedia untuk Microsoft Word di Windows. Lihat halaman produk untuk pilihan akses dan kompatibilitas terbaru; tonton demo di bawah untuk alur penggunaannya."
+    }
+  },
+  "tempmail-pro": {
+    "story": {
+      "en": "Some short-lived online tasks do not need a primary email address—for example, trying a service that asks for an email. TempMail Pro offers a temporary inbox for those needs, keeping the workflow separate from a personal inbox.",
+      "id": "Sebagian kebutuhan online yang singkat tidak memerlukan alamat email utama—misalnya, mencoba layanan yang meminta email. TempMail Pro menyediakan inbox sementara untuk kebutuhan tersebut, terpisah dari inbox pribadi."
+    },
+    "focus": {
+      "en": "I develop TempMail Pro as a personal web project, bringing the temporary address and incoming messages together in one interface.",
+      "id": "Saya mengembangkan TempMail Pro sebagai proyek web personal yang menyatukan alamat sementara dan pesan masuk dalam satu antarmuka."
+    },
+    "statusText": {
+      "en": "Available on the web. Temporary addresses can expire or become inaccessible. Do not use them for banking, important accounts, or messages you need to keep.",
+      "id": "Sudah tersedia di web. Alamat sementara dapat kedaluwarsa atau tidak bisa diakses kembali. Jangan gunakan untuk perbankan, akun penting, atau pesan yang perlu disimpan."
+    }
+  },
+  "coda": {
+    "story": {
+      "en": "Coda is the browser-based part of my music projects: browse music, pick a song, and listen in the web app. Discover and playlist selections offer starting points, while Speed Dial and Quick Picks make it easier to choose what to play. Unlike HiFi, Coda is accessed through a website.",
+      "id": "Coda adalah proyek musik saya yang berbasis browser: telusuri musik, pilih lagu, lalu dengarkan di aplikasi web. Discover dan pilihan playlist menjadi titik awal, sementara Speed Dial dan Quick Picks memudahkan pemilihan lagu. Berbeda dari HiFi, Coda diakses melalui website."
+    },
+    "focus": {
+      "en": "I develop Coda as a personal web music project, with a focus on bringing music discovery and listening into the same browser experience.",
+      "id": "Saya mengembangkan Coda sebagai proyek musik web personal, dengan fokus menyatukan pencarian dan pemutaran musik dalam pengalaman browser yang sama."
+    },
+    "statusText": {
+      "en": "Available as a web app. Open Coda to try it; music availability depends on the source services. HiFi is a separate Android and desktop project that is still in development.",
+      "id": "Sudah tersedia sebagai aplikasi web. Buka Coda untuk mencobanya; ketersediaan musik bergantung pada layanan sumber. HiFi adalah proyek Android dan desktop terpisah yang masih dikembangkan."
+    }
+  },
+  "safevideos": {
+    "story": {
+      "en": "Media comes from different platforms, but saving a permitted download should start with a simple step: paste its link. SafeVideos brings that link-based workflow into one web interface instead of asking visitors to navigate a separate tool for every source.",
+      "id": "Media berasal dari berbagai platform, tetapi menyimpan unduhan yang diizinkan bisa dimulai dari langkah sederhana: menempelkan tautannya. SafeVideos menyatukan alur berbasis tautan dalam satu antarmuka web, tanpa perlu mencari alat terpisah untuk setiap sumber."
+    },
+    "focus": {
+      "en": "I develop SafeVideos as a personal web utility focused on link-based media downloads. It is intended for content users have permission to download.",
+      "id": "Saya mengembangkan SafeVideos sebagai utilitas web personal yang berfokus pada unduhan media melalui tautan. Penggunaannya ditujukan untuk konten yang boleh diunduh."
+    },
+    "statusText": {
+      "en": "Available on the web. Supported sources and download options can vary; this is not a promise of support for every platform. Respect content ownership and download permissions.",
+      "id": "Sudah tersedia di web. Sumber yang didukung dan pilihan unduhan dapat berbeda; bukan berarti semua platform didukung. Hormati kepemilikan konten dan izin pengunduhannya."
+    }
+  },
+  "hifi": {
+    "story": {
+      "en": "Where Coda offers listening through a website, HiFi explores a dedicated app experience for Android and desktop. The current work connects song search with a now-playing screen and queue controls, including shuffle and radio-style continuation.",
+      "id": "Jika Coda menawarkan pemutaran melalui website, HiFi mengembangkan pengalaman aplikasi khusus untuk Android dan desktop. Pengerjaan saat ini menghubungkan pencarian lagu dengan layar pemutar dan kontrol antrean, termasuk shuffle serta kelanjutan lagu bergaya radio."
+    },
+    "focus": {
+      "en": "I develop HiFi as my Android and desktop music-app project. The current implementation includes player and queue flows, with an Android-specific stream integration; desktop playback is not yet verified.",
+      "id": "Saya mengembangkan HiFi sebagai proyek aplikasi musik untuk Android dan desktop. Implementasi saat ini mencakup alur pemutar dan antrean, dengan integrasi stream khusus Android; pemutaran desktop belum diverifikasi."
+    },
+    "progress": {
+      "implemented": {
+        "en": [
+          "Song-search interface and music data requests",
+          "Now-playing screen with play/pause and seek controls",
+          "Queue management, shuffle, and radio continuation logic",
+          "Android native audio-stream integration"
+        ],
+        "id": [
+          "Antarmuka pencarian lagu dan permintaan data musik",
+          "Layar pemutar dengan kontrol putar/jeda dan seek",
+          "Pengelolaan antrean, shuffle, dan logika kelanjutan radio",
+          "Integrasi stream audio native Android"
+        ]
+      },
+      "unverified": {
+        "en": [
+          "Android-device playback and the desktop playback path still need validation.",
+          "Cross-platform reliability and release readiness have not been confirmed."
+        ],
+        "id": [
+          "Pemutaran pada perangkat Android dan jalur pemutaran desktop masih perlu divalidasi.",
+          "Keandalan lintas platform serta kesiapan rilis belum dipastikan."
+        ]
+      }
+    },
+    "statusText": {
+      "en": "In development. The features listed here are present in the reviewed code, not a claim of a fully tested release. No public download is provided in this portfolio.",
+      "id": "Masih dalam pengembangan. Fitur yang dicantumkan terlihat pada kode yang diperiksa, bukan klaim rilis yang sudah diuji sepenuhnya. Belum ada unduhan publik di portfolio ini."
+    }
+  },
+  "linko": {
+    "story": {
+      "en": "Linko focuses on a practical task: moving files between a phone and a Windows computer. Device discovery, file selection, sending, receiving, and transfer progress are brought together in one app. Its transfer foundation is derived from LocalSend.",
+      "id": "Linko berfokus pada kebutuhan praktis: memindahkan file antara ponsel dan komputer Windows. Pencarian perangkat, pemilihan file, pengiriman, penerimaan, dan progress transfer disatukan dalam satu aplikasi. Fondasi transfernya berasal dari LocalSend."
+    },
+    "focus": {
+      "en": "I develop Linko on top of an existing open-source foundation. The project includes interface and sharing-flow adaptations, while its underlying transfer foundation remains credited to LocalSend rather than presented as an engine I built from scratch.",
+      "id": "Saya mengembangkan Linko di atas fondasi open-source yang sudah ada. Proyek ini mencakup penyesuaian antarmuka dan alur berbagi, sementara fondasi transfernya tetap diakui berasal dari LocalSend, bukan ditampilkan sebagai mesin yang saya buat dari nol."
+    },
+    "progress": {
+      "implemented": {
+        "en": [
+          "Nearby-device discovery and selection",
+          "File selection, sending, and receiving flows",
+          "Transfer progress and cancellation handling",
+          "Transfer history, settings, and a web-sharing interface"
+        ],
+        "id": [
+          "Pencarian dan pemilihan perangkat terdekat",
+          "Alur pemilihan, pengiriman, dan penerimaan file",
+          "Progress transfer dan penanganan pembatalan",
+          "Riwayat transfer, pengaturan, dan antarmuka berbagi melalui web"
+        ]
+      },
+      "unverified": {
+        "en": [
+          "Two-way transfers between physical Android and Windows devices still need validation.",
+          "Transfer speed, security, and release readiness have not been independently validated."
+        ],
+        "id": [
+          "Transfer dua arah antara perangkat Android dan Windows fisik masih perlu divalidasi.",
+          "Kecepatan transfer, keamanan, dan kesiapan rilis belum divalidasi secara independen."
+        ]
+      }
+    },
+    "statusText": {
+      "en": "In development. The listed flows are present in the reviewed code. This portfolio does not yet provide a release download or claim validated transfer performance.",
+      "id": "Masih dalam pengembangan. Alur yang dicantumkan terlihat pada kode yang diperiksa. Portfolio ini belum menyediakan unduhan rilis atau mengklaim performa transfer yang sudah divalidasi."
+    }
+  },
+  "alhuda": {
+    "story": {
+      "en": "AlHuda aims to bring prayer reminders and Quran reading into one Android app. Development currently centers on the reminder foundation: prayer-time calculations, location settings, scheduled alarms, and Adhan audio. Quran reading is an intended feature, not an available feature of the reviewed implementation.",
+      "id": "AlHuda ditujukan untuk menyatukan pengingat salat dan pembaca Al-Qur’an dalam satu aplikasi Android. Pengembangan saat ini berfokus pada fondasi pengingat: perhitungan jadwal salat, pengaturan lokasi, alarm terjadwal, dan audio Adzan. Pembaca Al-Qur’an masih menjadi rencana fitur, bukan fitur yang tersedia pada implementasi yang diperiksa."
+    },
+    "focus": {
+      "en": "I develop AlHuda as an Android project for prayer reminders and, eventually, Quran reading. The current project work is centered on reminder flows; I do not present the planned Quran reader as finished.",
+      "id": "Saya mengembangkan AlHuda sebagai proyek Android untuk pengingat salat dan, ke depannya, pembaca Al-Qur’an. Pengerjaan proyek saat ini berfokus pada alur pengingat; pembaca Al-Qur’an yang direncanakan tidak saya tampilkan sebagai fitur yang sudah selesai."
+    },
+    "progress": {
+      "implemented": {
+        "en": [
+          "Prayer-time calculation using location and calculation settings",
+          "Adhan alarm scheduling and audio playback code",
+          "Location selection, saved locations, and app settings",
+          "Upcoming-alarm screen and navigation drawer"
+        ],
+        "id": [
+          "Perhitungan jadwal salat berdasarkan lokasi dan pengaturan metode",
+          "Kode penjadwalan alarm dan pemutaran audio Adzan",
+          "Pemilihan lokasi, lokasi tersimpan, dan pengaturan aplikasi",
+          "Layar alarm mendatang dan menu navigasi"
+        ]
+      },
+      "unverified": {
+        "en": [
+          "Quran reader: planned; an implementation was not found in the reviewed code.",
+          "Alarm delivery, background behavior, and audio still need testing on physical devices."
+        ],
+        "id": [
+          "Pembaca Al-Qur’an: direncanakan; implementasinya belum ditemukan pada kode yang diperiksa.",
+          "Pengiriman alarm, perilaku latar belakang, dan audio masih perlu diuji pada perangkat fisik."
+        ]
+      }
+    },
+    "statusText": {
+      "en": "In development, with prayer reminders as the current focus. Quran reading is planned; Qibla, Qada counter, and monthly-view menu items are still placeholders in the reviewed code.",
+      "id": "Masih dalam pengembangan, dengan pengingat salat sebagai fokus saat ini. Pembaca Al-Qur’an masih direncanakan; menu Kiblat, penghitung Qada, dan tampilan bulanan masih berupa placeholder pada kode yang diperiksa."
+    }
+  }
+}

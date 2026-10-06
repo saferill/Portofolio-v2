@@ -1,0 +1,48 @@
+/* Satoshi */
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/assets/18dee30105e4.woff2') format('woff2'),
+       url('/assets/b3d4ad56cc0f.woff') format('woff'),
+       url('/assets/33701a645e47.ttf') format('truetype');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/assets/cd754a9a40ec.woff2') format('woff2'),
+       url('/assets/00171264a447.woff') format('woff'),
+       url('/assets/40316e81d008.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/assets/30cb7506036f.woff2') format('woff2'),
+       url('/assets/c6ae285191f0.woff') format('woff'),
+       url('/assets/6aeba3a2373d.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/assets/2693a8bac045.woff2') format('woff2'),
+       url('/assets/3cf607b9964f.woff') format('woff'),
+       url('/assets/b0af970a7f10.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/assets/d6405e668b16.woff2') format('woff2'),
+       url('/assets/fd35d704d680.woff') format('woff'),
+       url('/assets/dc3724446194.ttf') format('truetype');
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+

@@ -1,0 +1,282 @@
+{
+  "name": "Moch. Syafril Ramadhani",
+  "shortName": "Syafril",
+  "handle": "safe_rill",
+  "location": "Jember, East Java, Indonesia",
+  "email": "mochsyafrilramadhani5@gmail.com",
+  "instagram": "https://www.instagram.com/safe_rill/",
+  "whatsapp": "https://wa.me/6285143001281",
+  "phoneDisplay": "0851-4300-1281",
+  "university": "Universitas Nahdlatul Ulama Yogyakarta",
+  "major": "Accounting",
+  "school": "SMK Nurul Jadid",
+  "schoolMajor": "Multimedia",
+  "skills": [
+    "Microsoft Word",
+    "Microsoft Excel",
+    "Canva",
+    "CorelDRAW",
+    "CapCut"
+  ],
+  "project": {
+    "id": "word-academic",
+    "title": "Word Academic",
+    "slug": "word-academic",
+    "category": "Productivity",
+    "platform": "Microsoft Word · Windows",
+    "url": "https://lynk.id/wordacademic",
+    "description": "A Windows add-in for Microsoft Word that helps students format academic assignments and theses.",
+    "features": [
+      "Apply headings and subheadings",
+      "Create a table of contents",
+      "Add page numbering",
+      "Run the supported formatting actions in one click"
+    ],
+    "status": "available",
+    "filters": [
+      "desktop"
+    ],
+    "thumbnail": "/images/word-academic-1.svg",
+    "gallery": [
+      "/images/word-academic-1.svg",
+      "/images/word-academic-2.svg",
+      "/images/word-academic-3.svg"
+    ],
+    "featured": true,
+    "visualNote": "Product identity and feature illustrations, not screenshots of the app interface.",
+    "need": "Helping students format assignments and theses more easily.",
+    "access": "Available for Microsoft Word on Windows. Visit the product page for current access options and compatibility details; watch the demo below for the workflow.",
+    "demo": {
+      "provider": "local",
+      "fileId": "1AaZ--NhLMk_jaarbTfarFwx330lF56YF",
+      "url": "https://drive.google.com/file/d/1AaZ--NhLMk_jaarbTfarFwx330lF56YF/view",
+      "src": "/videos/word-academic-demo-v2.mp4"
+    }
+  },
+  "projects": [
+    {
+      "id": "word-academic",
+      "title": "Word Academic",
+      "slug": "word-academic",
+      "category": "Productivity",
+      "platform": "Microsoft Word · Windows",
+      "url": "https://lynk.id/wordacademic",
+      "description": "A Windows add-in for Microsoft Word that helps students format academic assignments and theses.",
+      "features": [
+        "Apply headings and subheadings",
+        "Create a table of contents",
+        "Add page numbering",
+        "Run the supported formatting actions in one click"
+      ],
+      "status": "available",
+      "filters": [
+        "desktop"
+      ],
+      "thumbnail": "/images/word-academic-1.svg",
+      "gallery": [
+        "/images/word-academic-1.svg",
+        "/images/word-academic-2.svg",
+        "/images/word-academic-3.svg"
+      ],
+      "featured": true,
+      "visualNote": "Product identity and feature illustrations, not screenshots of the app interface.",
+      "need": "Helping students format assignments and theses more easily.",
+      "access": "Available for Microsoft Word on Windows. Visit the product page for current access options and compatibility details; watch the demo below for the workflow.",
+      "demo": {
+        "provider": "local",
+        "fileId": "1AaZ--NhLMk_jaarbTfarFwx330lF56YF",
+        "url": "https://drive.google.com/file/d/1AaZ--NhLMk_jaarbTfarFwx330lF56YF/view",
+        "src": "/videos/word-academic-demo-v2.mp4"
+      }
+    },
+    {
+      "id": "tempmail-pro",
+      "slug": "tempmail-pro",
+      "title": "TempMail Pro",
+      "category": "Utilities",
+      "platform": "Web",
+      "url": "https://mailtemppro.netlify.app/",
+      "description": "A temporary-email web app for receiving messages without using your primary email address.",
+      "features": [
+        "Get a temporary email address",
+        "Copy the address for use where appropriate",
+        "Read incoming messages in the inbox",
+        "Refresh the inbox, including automatic refresh options"
+      ],
+      "filters": [
+        "web"
+      ],
+      "status": "available",
+      "thumbnail": "/images/projects/tempmail-pro.webp",
+      "gallery": [
+        "/images/projects/tempmail-pro.webp"
+      ],
+      "featured": false,
+      "visualNote": "Screenshot of the public website.",
+      "need": "Providing a temporary email address for tasks that do not require your primary inbox.",
+      "access": "Available on the web. Temporary addresses can expire or become inaccessible. Do not use them for banking, important accounts, or messages you need to keep."
+    },
+    {
+      "id": "coda",
+      "slug": "coda",
+      "title": "Coda",
+      "category": "Music",
+      "platform": "Web",
+      "url": "https://codamusic.vercel.app/",
+      "description": "A web music app for discovering songs and listening directly in a browser.",
+      "features": [
+        "Browse music through Discover",
+        "Choose tracks from Speed Dial and Quick Picks",
+        "Explore playlist selections",
+        "Play music directly in the web app"
+      ],
+      "filters": [
+        "web"
+      ],
+      "status": "available",
+      "thumbnail": "/images/projects/coda.webp",
+      "gallery": [
+        "/images/projects/coda.webp"
+      ],
+      "featured": true,
+      "visualNote": "Screenshot of the public website.",
+      "need": "Discovering and listening to music in your browser.",
+      "access": "Available as a web app. Open Coda to try it; music availability depends on the source services. HiFi is a separate Android and desktop project that is still in development."
+    },
+    {
+      "id": "safevideos",
+      "slug": "safevideos",
+      "title": "SafeVideos",
+      "category": "Utilities",
+      "platform": "Web",
+      "url": "https://safevideos.vercel.app/",
+      "description": "A web-based tool for downloading video and audio from supported platforms using a media link.",
+      "features": [
+        "Enter or paste a media link",
+        "Download video or audio when supported by the source",
+        "Use one web interface for multiple supported platforms"
+      ],
+      "filters": [
+        "web"
+      ],
+      "status": "available",
+      "thumbnail": "/images/projects/safevideos.webp",
+      "gallery": [
+        "/images/projects/safevideos.webp"
+      ],
+      "featured": true,
+      "visualNote": "Screenshot of the public website.",
+      "need": "Saving media from links. Only download content you have the right to download.",
+      "access": "Available on the web. Supported sources and download options can vary; this is not a promise of support for every platform. Respect content ownership and download permissions."
+    },
+    {
+      "id": "hifi",
+      "slug": "hifi",
+      "title": "HiFi",
+      "category": "Music",
+      "platform": "Android · Desktop",
+      "url": null,
+      "description": "A dedicated music app for Android and desktop, currently in development.",
+      "features": [
+        "Song-search interface and music data requests",
+        "Now-playing screen with play/pause and seek controls",
+        "Queue management, shuffle, and radio continuation logic",
+        "Android native audio-stream integration"
+      ],
+      "filters": [
+        "android",
+        "desktop"
+      ],
+      "status": "development",
+      "thumbnail": "/images/projects/hifi.svg",
+      "gallery": [
+        "/images/projects/hifi.svg"
+      ],
+      "featured": false,
+      "visualNote": "Placeholder identity artwork, not an official logo or an app screenshot.",
+      "need": "Developing a music listening experience for Android and desktop.",
+      "access": "In development. The features listed here are present in the reviewed code, not a claim of a fully tested release. No public download is provided in this portfolio."
+    },
+    {
+      "id": "linko",
+      "slug": "linko",
+      "title": "Linko",
+      "category": "File Sharing",
+      "platform": "Android ↔ Windows",
+      "url": null,
+      "description": "A local-network file-sharing project for Android and Windows, currently in development.",
+      "features": [
+        "Nearby-device discovery and selection",
+        "File selection, sending, and receiving flows",
+        "Transfer progress and cancellation handling",
+        "Transfer history, settings, and a web-sharing interface"
+      ],
+      "filters": [
+        "android",
+        "desktop"
+      ],
+      "status": "development",
+      "thumbnail": "/images/projects/linko.svg",
+      "gallery": [
+        "/images/projects/linko.svg"
+      ],
+      "featured": false,
+      "visualNote": "Placeholder identity artwork, not an official logo or an app screenshot.",
+      "need": "Making it easier to exchange files between Android and Windows devices.",
+      "access": "In development. The listed flows are present in the reviewed code. This portfolio does not yet provide a release download or claim validated transfer performance."
+    },
+    {
+      "id": "alhuda",
+      "slug": "alhuda",
+      "title": "AlHuda",
+      "category": "Faith",
+      "platform": "Android",
+      "url": null,
+      "description": "An Android prayer-reminder app in development, with Quran reading planned as part of its scope.",
+      "features": [
+        "Prayer-time calculation using location and calculation settings",
+        "Adhan alarm scheduling and audio playback code",
+        "Location selection, saved locations, and app settings",
+        "Upcoming-alarm screen and navigation drawer"
+      ],
+      "filters": [
+        "android"
+      ],
+      "status": "development",
+      "thumbnail": "/images/projects/alhuda.svg",
+      "gallery": [
+        "/images/projects/alhuda.svg"
+      ],
+      "featured": false,
+      "visualNote": "Placeholder identity artwork, not an official logo or an app screenshot.",
+      "need": "Bringing Adhan and the Quran together in an Android app.",
+      "access": "In development, with prayer reminders as the current focus. Quran reading is planned; Qibla, Qada counter, and monthly-view menu items are still placeholders in the reviewed code."
+    }
+  ],
+  "experience": [
+    {
+      "type": "internship",
+      "role": "Administration Intern (PKL)",
+      "organization": "Universitas Muhammadiyah Jember",
+      "period": "December 2022 – March 2023",
+      "details": [
+        "Assisted with student administrative needs and requests.",
+        "Helped facilitate communication regarding student requests to lecturers.",
+        "Assisted with preparing letters and other student administration tasks."
+      ]
+    },
+    {
+      "type": "organization",
+      "role": "Media and Information (Medinfo)",
+      "organization": "Himpunan Mahasiswa Akuntansi · Universitas Nahdlatul Ulama Yogyakarta",
+      "period": "Active · 2026/2027 term",
+      "details": [
+        "Active in the association’s media and information function."
+      ]
+    }
+  ],
+  "cv": {
+    "pdf": "/documents/syafril-cv-en.pdf",
+    "docx": "/documents/syafril-cv-en.docx"
+  }
+}

@@ -1,0 +1,37 @@
+/* Keep the original Layout.BZ1HocBq.css in control of all page geometry/type.
+   Only native-dialog accessibility and interaction fixes live here. */
+.pf-dialog{margin:auto;width:460px;max-width:calc(100vw - 32px);padding:28px 36px 32px;overflow:visible;box-shadow:0 12px 40px #00000018}
+.pf-dialog::backdrop{background:#0000004d;backdrop-filter:blur(4px)}
+.contact-close{position:absolute;right:14px;top:12px;width:26px;height:26px;border-radius:50%;font-size:20px;color:var(--color-muted);cursor:pointer}
+.contact-options{margin-top:16px}
+[hidden]{display:none!important}
+[data-music-icon]{display:contents}
+[data-music-icon] svg{width:12px;height:12px;flex-shrink:0}
+@media(min-width:640px){[data-music-icon] svg{width:14px;height:14px}}
+.pf-dialog a:focus-visible,.pf-dialog button:focus-visible,[data-filter]:focus-visible,[data-gallery-index]:focus-visible{outline:2px solid var(--color-foreground);outline-offset:4px}
+[data-gallery-index][aria-pressed="true"]{opacity:1;border-color:white}
+[data-gallery-index][aria-pressed="false"]{opacity:.4;border-color:#ffffff1a}
+@media(prefers-reduced-motion:reduce){.animate-blur-reveal{animation:none;opacity:1}.animate-wave{animation:none}html{scroll-behavior:auto}}
+
+[data-gallery-track]+div:empty{display:none}
+/* Responsive, user-supplied project demo; other page geometry is unchanged. */
+.pf-demo-frame{position:relative;aspect-ratio:9/16;width:100%;max-width:420px;margin-inline:auto}
+.pf-demo-frame video{display:block;width:100%;height:100%;object-fit:contain;background:#111}
+/* Compact language control outside the original card, preserving its geometry. */
+.pf-language{position:absolute;top:12px;right:max(20px,calc((100vw - 1300px)/2 + 20px));z-index:35;display:flex;align-items:center;gap:7px;font-size:11px;color:var(--color-muted)}
+.pf-language button{padding:3px 5px;cursor:pointer;border-radius:5px}
+.pf-language button[aria-pressed="true"]{font-weight:700;color:var(--color-foreground);text-decoration:underline;text-underline-offset:4px}
+.pf-language button:focus-visible{outline:2px solid var(--color-foreground);outline-offset:2px}
+.pf-progress-list{padding-left:18px;list-style:disc}
+.pf-progress-list li+li{margin-top:10px}
+@media(max-width:639px){.pf-language{top:3px;right:24px;font-size:10px;gap:4px}}
+/* Self-contained CV controls; do not depend on absent compiled utility classes. */
+.pf-cv-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:20px}
+.pf-cv-button{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:40px;padding:10px 15px;border:1px solid var(--color-border);border-radius:999px;font-size:12px;font-weight:600;line-height:18px;text-decoration:none;white-space:nowrap;transition:opacity .2s,background-color .2s}
+.pf-cv-button svg{width:15px;height:15px;flex:none}
+.pf-cv-primary{background:var(--color-foreground);color:var(--color-card);border-color:var(--color-foreground)}
+.pf-cv-secondary{background:transparent;color:var(--color-foreground)}
+.pf-cv-format{font-size:9px;line-height:14px;font-weight:500;letter-spacing:.06em;opacity:.6}
+.pf-cv-button:hover{opacity:.78}
+.pf-cv-button:focus-visible{outline:2px solid var(--color-foreground);outline-offset:4px}
+@media(prefers-reduced-motion:reduce){.pf-cv-button{transition:none}}

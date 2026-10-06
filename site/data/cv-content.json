@@ -1,0 +1,32 @@
+{
+ "id": {
+  "headline": "Mahasiswa Akuntansi | Administrasi | Multimedia",
+  "summaryTitle": "Profil",
+  "summary": "Mahasiswa aktif Akuntansi di Universitas Nahdlatul Ulama Yogyakarta dengan latar belakang Multimedia dari SMK Nurul Jadid. Memiliki pengalaman PKL di bidang administrasi mahasiswa serta aktif sebagai Medinfo di Himpunan Mahasiswa Akuntansi periode 2026/2027. Mengembangkan proyek aplikasi personal untuk kebutuhan dokumen dan aktivitas sehari-hari.",
+  "experienceTitle": "Pengalaman PKL",
+  "organizationTitle": "Pengalaman Organisasi",
+  "educationTitle": "Pendidikan",
+  "current": "Akuntansi · Mahasiswa aktif",
+  "previous": "Multimedia",
+  "skillsTitle": "Keahlian",
+  "projectsTitle": "Proyek Pilihan",
+  "word": "Add-in Microsoft Word untuk Windows yang membantu penataan heading, subheading, daftar isi, dan nomor halaman pada tugas dan skripsi.",
+  "webTitle": "Aplikasi web personal",
+  "web": "TempMail Pro untuk email sementara, Coda untuk musik berbasis web, dan SafeVideos untuk unduhan media dari tautan. Ketiganya sudah tersedia."
+ },
+ "en": {
+  "headline": "Accounting Student | Administration | Multimedia",
+  "summaryTitle": "Profile",
+  "summary": "Current Accounting student at Universitas Nahdlatul Ulama Yogyakarta with a Multimedia background from SMK Nurul Jadid. Experience in student administration through an internship and currently active in Media and Information (Medinfo) at the Accounting Student Association for the 2026/2027 term. Develops personal app projects for documents and everyday tasks.",
+  "experienceTitle": "Internship Experience",
+  "organizationTitle": "Organizational Experience",
+  "educationTitle": "Education",
+  "current": "Accounting · Current student",
+  "previous": "Multimedia",
+  "skillsTitle": "Skills",
+  "projectsTitle": "Selected Projects",
+  "word": "A Microsoft Word add-in for Windows that helps format headings, subheadings, tables of contents, and page numbers in assignments and theses.",
+  "webTitle": "Personal web applications",
+  "web": "TempMail Pro for temporary email, Coda for browser-based music, and SafeVideos for link-based media downloads. All three are available."
+ }
+}

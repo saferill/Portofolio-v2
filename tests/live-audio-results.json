@@ -1,0 +1,40 @@
+{
+  "love_me_not_actual_playback": {
+    "version": "audio-2",
+    "trackId": "HfpR4tAmI7E",
+    "playback": "HTMLAudio",
+    "playing": true,
+    "currentTime": 2.013368,
+    "duration": 213.466667,
+    "readyState": 4,
+    "networkState": 1,
+    "mediaError": null,
+    "resolving": false,
+    "message": "Love Me Not \u00b7 Ravyn Lenae",
+    "source": "/api/music/audio?id=HfpR4tAmI7E"
+  },
+  "pause": true,
+  "pause_stops_clock": true,
+  "resume": true,
+  "seek": 60,
+  "volume": 0.35,
+  "audio_survives_navigation": true,
+  "queue_next_actual_playback": {
+    "version": "audio-2",
+    "trackId": "UyMvBWVGaOA",
+    "playback": "HTMLAudio",
+    "playing": true,
+    "currentTime": 1.010438,
+    "duration": 215.686644,
+    "readyState": 4,
+    "networkState": 1,
+    "mediaError": null,
+    "resolving": false,
+    "message": "Every Summertime \u00b7 NIKI",
+    "source": "/api/music/audio?id=UyMvBWVGaOA"
+  },
+  "previous": true,
+  "stop": true,
+  "errors": [],
+  "no_iframe": true
+}
