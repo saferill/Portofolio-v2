@@ -16,7 +16,46 @@ const M=React.forwardRef(function MusicPlayer(props,ref){
   const status=panel.querySelector('[role=status]'),retry=panel.querySelector('.audio-retry'),alternatives=panel.querySelector('.audio-alternatives'),choices=panel.querySelector('.audio-choices'),source=panel.querySelector('a');
   const debug=()=>{window.portfolioMusicDebug={version:'audio-2',trackId:current?.id,playback:'HTMLAudio',playing:!audio.paused&&!audio.ended,currentTime:number(audio.currentTime),duration:number(audio.duration),readyState:audio.readyState,networkState:audio.networkState,mediaError:audio.error?.code||null,resolving,message:status.textContent,source:audio.getAttribute('src')||null};};
   function state(playing){callbacks.current.onPlayStateChange?.(playing);if('mediaSession'in navigator)navigator.mediaSession.playbackState=playing?'playing':'paused';debug();}
-  function progress(){callbacks.current.onProgressChange?.(number(audio.currentTime),number(audio.duration)||number(current?.durationSeconds));debug();}
+  function progress(){
+   let cur=number(audio.currentTime),dur=number(audio.duration)||number(current?.durationSeconds);
+   if(current&&current.id!=='local-summer-nights'&&ytPlayer&&ytPlayer.getCurrentTime){
+    try{cur=number(ytPlayer.getCurrentTime());const d=number(ytPlayer.getDuration());if(d>0)dur=d;}catch{}
+   }
+   callbacks.current.onProgressChange?.(cur,dur);debug();
+  }
+  let ytPlayer=null;
+  function getYtPlayer(cb){
+   if(ytPlayer&&ytPlayer.playVideo)return cb(ytPlayer);
+   if(!window.YT){
+    const s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);
+   }
+   let el=document.getElementById('yt-audio-container');
+   if(!el){
+    el=document.createElement('div');el.id='yt-audio-container';
+    el.style.cssText='position:fixed;width:1px;height:1px;left:-9999px;opacity:0.001;pointer-events:none;z-index:-1000;';
+    document.body.appendChild(el);
+   }
+   const timer=setInterval(()=>{
+    if(window.YT&&window.YT.Player){
+     clearInterval(timer);
+     if(!ytPlayer){
+      ytPlayer=new window.YT.Player('yt-audio-container',{
+       height:'1',width:'1',
+       playerVars:{autoplay:1,controls:0,disablekb:1,fs:0,rel:0,playsinline:1},
+       events:{
+        onReady:e=>{cb(e.target);},
+        onStateChange:e=>{
+         if(e.data===1){failed=false;clearTimeout(watchdog);state(true);status.textContent=(current?.title||'')+' · '+(current?.artist||'');panel.hidden=true;debug();}
+         else if(e.data===2){state(false);}
+         else if(e.data===0){state(false);next();}
+        },
+        onError:()=>{fail(tr('YouTube audio is unavailable for this song. Try another version.'));}
+       }
+      });
+     }else cb(ytPlayer);
+    }
+   },100);
+  }
   function message(text,error=false,visible=true){status.textContent=text;if(visible)panel.hidden=false;window.dispatchEvent(new CustomEvent('music-status',{detail:{text,error,track:current}}));debug();}
   function fail(text){failed=true;clearTimeout(watchdog);state(false);retry.disabled=false;retry.textContent=tr('Retry');message(text,true);}
   function readyMessage(){retry.disabled=false;retry.textContent=tr('Play music');message(tr('Audio is ready. Click Play music or the mini-player’s play button to allow playback.'));}
@@ -38,29 +77,37 @@ const M=React.forwardRef(function MusicPlayer(props,ref){
    choices.replaceChildren();source.hidden=current.id==='local-summer-nights';source.href=current.id==='local-summer-nights'?'#':'https://www.youtube.com/watch?v='+encodeURIComponent(current.id);
    alternatives.hidden=current.id==='local-summer-nights';retry.disabled=true;retry.textContent=tr('Preparing…');message(tr('Preparing audio for ')+current.title+'…');
    try{
-    let src='/summer-nights.mp3';
-    if(current.id!=='local-summer-nights'){
-     const response=await fetch('/api/music/resolve?id='+encodeURIComponent(current.id),{signal:abort.signal});const result=await response.json();
-     if(!response.ok)throw new Error(result.error||tr('The audio source is unavailable.'));
-     if(request!==token||disposed)return;
-     if(!/^\/api\/music\/audio\?id=[\w-]{11}$/.test(result.src))throw new Error(tr('Invalid audio URL.'));
-     src=result.src;current.durationSeconds=number(result.durationSeconds)||current.durationSeconds;
+    if(current.id==='local-summer-nights'){
+     if(ytPlayer&&ytPlayer.pauseVideo)try{ytPlayer.pauseVideo();}catch{}
+     resolving=false;retry.disabled=false;retry.textContent=tr('Play music');audio.src='/summer-nights.mp3';audio.volume=volume/100;
+     callbacks.current.onProgressChange?.(0,current.durationSeconds);
+     if(wantsPlay)await startAudio(request);else{audio.load();message(tr('Paused. Audio is ready to play.'));}
+    }else{
+     audio.pause();resolving=true;message(tr('Preparing audio for ')+current.title+'…');
+     getYtPlayer(p=>{
+      if(request!==token||disposed)return;
+      resolving=false;retry.disabled=false;retry.textContent=tr('Play music');
+      try{
+       p.loadVideoById(current.id);
+       p.setVolume(volume);
+       if(wantsPlay)p.playVideo();
+      }catch(err){fail(tr('The audio source is unavailable.'));}
+     });
     }
-    if(request!==token||disposed)return;
-    resolving=false;retry.disabled=false;retry.textContent=tr('Play music');audio.src=src;audio.volume=volume/100;
-    callbacks.current.onProgressChange?.(0,current.durationSeconds);
-    if(wantsPlay)await startAudio(request);else{audio.load();message(tr('Paused. Audio is ready to play.'));}
    }catch(error){if(request!==token||disposed)return;resolving=false;if(error.name!=='AbortError')fail(error.message||tr('The audio source is unavailable.'));}
   }
-  function pause(){wantsPlay=false;clearTimeout(watchdog);audio.pause();state(false);}
+  function pause(){wantsPlay=false;clearTimeout(watchdog);audio.pause();if(ytPlayer&&ytPlayer.pauseVideo)try{ytPlayer.pauseVideo();}catch{}state(false);}
   function resume(){
    if(!current){message(tr('Choose a song with /play song title.'));return;}
    wantsPlay=true;
-   if(resolving){message(tr('Audio is being prepared. Playback will start when it is ready.'));return;}
-   if(failed||!audio.getAttribute('src')){play(current,false);return;}
-   startAudio(token);
+   if(current.id==='local-summer-nights'){
+    if(failed||!audio.getAttribute('src')){play(current,false);return;}
+    startAudio(token);
+   }else{
+    getYtPlayer(p=>{try{p.playVideo();}catch{}});
+   }
   }
-  function stop(){++token;abort?.abort();clearTimeout(watchdog);wantsPlay=false;resolving=false;failed=false;current=null;queue=[];audio.pause();audio.removeAttribute('src');audio.load();state(false);callbacks.current.onTrackChange?.(null);callbacks.current.onProgressChange?.(0,0);panel.hidden=true;}
+  function stop(){++token;abort?.abort();clearTimeout(watchdog);wantsPlay=false;resolving=false;failed=false;current=null;queue=[];audio.pause();audio.removeAttribute('src');audio.load();if(ytPlayer&&ytPlayer.stopVideo)try{ytPlayer.stopVideo();}catch{}state(false);callbacks.current.onTrackChange?.(null);callbacks.current.onProgressChange?.(0,0);panel.hidden=true;}
   async function next(){
    if(nextBusy)return;nextBusy=true;
    try{
@@ -74,9 +121,9 @@ const M=React.forwardRef(function MusicPlayer(props,ref){
     if(song)await play(song);else{pause();message(tr('The queue has ended. Use /queue song title.'));}
    }catch(error){message(error.message,true);}finally{nextBusy=false;}
   }
-  function seek(seconds){if(!current||resolving)return;const duration=number(audio.duration);if(duration>0){audio.currentTime=Math.min(duration,number(seconds));progress();}}
+  function seek(seconds){if(!current||resolving)return;if(current.id==='local-summer-nights'){const duration=number(audio.duration);if(duration>0){audio.currentTime=Math.min(duration,number(seconds));progress();}}else{if(ytPlayer&&ytPlayer.seekTo)try{ytPlayer.seekTo(number(seconds),true);}catch{}}}
   function previous(){if(historyIndex>0){historyIndex--;play(history[historyIndex],false);}else seek(0);}
-  Object.assign(engine.current,{playTrack:play,queueTrack:track=>{if(!current)play(track);else{queue.push(track);message(track.title+tr(' added to the queue.'),false,false);}},pause,resume,stop,next,prev:previous,setVolume:value=>{volume=Math.min(100,number(value));audio.volume=volume/100;},seekTo:seek,setMinimized:()=>{},getMinimized:()=>panel.hidden});
+  Object.assign(engine.current,{playTrack:play,queueTrack:track=>{if(!current)play(track);else{queue.push(track);message(track.title+tr(' added to the queue.'),false,false);}},pause,resume,stop,next,prev:previous,setVolume:value=>{volume=Math.min(100,number(value));audio.volume=volume/100;if(ytPlayer&&ytPlayer.setVolume)try{ytPlayer.setVolume(volume);}catch{};},seekTo:seek,setMinimized:()=>{},getMinimized:()=>panel.hidden});
   retry.onclick=resume;panel.querySelector('.audio-stop').onclick=stop;panel.querySelector('.audio-dismiss').onclick=()=>{panel.hidden=true;};
   alternatives.onclick=async()=>{
    if(!current)return;const request=token;alternatives.disabled=true;message(tr('Searching for other versions…'));
@@ -93,7 +140,7 @@ const M=React.forwardRef(function MusicPlayer(props,ref){
   audio.onerror=()=>{if(current&&!resolving)fail(tr('Audio stream failed to load (code ')+(audio.error?.code||'?')+tr('). Click Retry or choose Other versions.'));};
   const interval=setInterval(progress,500);
   if('mediaSession'in navigator){for(const [action,handler]of Object.entries({play:resume,pause,stop,nexttrack:next,previoustrack:previous,seekto:details=>seek(details.seekTime)})){try{navigator.mediaSession.setActionHandler(action,handler);}catch{}}}
-  return()=>{disposed=true;++token;abort?.abort();clearTimeout(watchdog);clearInterval(interval);audio.onended=null;audio.onerror=null;audio.onpause=null;audio.ontimeupdate=null;audio.onplaying=null;audio.pause();audio.removeAttribute('src');audio.load();panel.remove();style.remove();};
+  return()=>{disposed=true;++token;abort?.abort();clearTimeout(watchdog);clearInterval(interval);audio.onended=null;audio.onerror=null;audio.onpause=null;audio.ontimeupdate=null;audio.onplaying=null;audio.pause();audio.removeAttribute('src');audio.load();if(ytPlayer&&ytPlayer.stopVideo)try{ytPlayer.stopVideo();}catch{};panel.remove();style.remove();};
  },[]);
  return null;
 });
