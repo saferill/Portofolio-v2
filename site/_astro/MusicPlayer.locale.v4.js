@@ -687,11 +687,17 @@ function getGlobalMusicEngine() {
       }
       const request = token;
       setMessage(tr('Finding the next song…'), false, false);
-      const response = await fetch('/api/music/search?id=' + encodeURIComponent(state.current.id));
+      const queryParams = new URLSearchParams({
+        id: state.current.id,
+        artist: state.current.artist || '',
+        title: state.current.title || ''
+      });
+      const response = await fetch('/api/music/search?' + queryParams.toString());
       const results = await response.json();
       if (request !== token) return;
       if (!response.ok) throw new Error(results.error || tr('Recommendations are unavailable.'));
-      const song = Array.isArray(results) && results.find(t => !state.history.some(h => h.id === t.id));
+      const list = Array.isArray(results) ? results : [results];
+      const song = list.find(t => t.id && t.id !== state.current?.id && !state.history.some(h => h.id === t.id));
       if (song) await play(song);
       else {
         pause();
