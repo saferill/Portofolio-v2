@@ -29,8 +29,22 @@ document.addEventListener('click',event=>{
 });
 document.addEventListener('close',event=>{if(event.target.id==='pf-contact')document.body.style.overflow='';},true);
 document.addEventListener('cancel',event=>{if(event.target.id==='pf-contact')document.body.style.overflow='';},true);
-window.addEventListener('music-track-change',event=>{track=event.detail.track;refreshMusic();});
-window.addEventListener('music-state-change',event=>{playing=event.detail.playing;refreshMusic();});
+let baseTitle = document.title;
+function updateTabStatus() {
+  const favicon = document.querySelector('link[rel="icon"]');
+  if (track && playing) {
+    document.title = `▶ ${track.title} · ${track.artist}`;
+    if (favicon) favicon.href = '/favicon-equalizer.svg';
+  } else if (track && !playing) {
+    document.title = `⏸ ${track.title} · ${track.artist}`;
+    if (favicon) favicon.href = '/favicon-paused.svg';
+  } else {
+    document.title = baseTitle;
+    if (favicon) favicon.href = '/favicon.svg';
+  }
+}
+window.addEventListener('music-track-change',event=>{track=event.detail.track;refreshMusic();updateTabStatus();});
+window.addEventListener('music-state-change',event=>{playing=event.detail.playing;refreshMusic();updateTabStatus();});
 function applyFilter(category){
  const buttons=[...document.querySelectorAll('[data-filter]')];
  if(!buttons.length)return;
@@ -39,7 +53,7 @@ function applyFilter(category){
  for(const card of document.querySelectorAll('[data-project-card]'))card.hidden=category!=='all'&&!card.dataset.categories.split(' ').includes(category);
 }
 window.addEventListener('popstate',()=>applyFilter(new URLSearchParams(location.search).get('category')||'all'));
-function init(){applyFilter(new URLSearchParams(location.search).get('category')||'all');refreshMusic();window.dispatchEvent(new CustomEvent('music-request-state'));}
+function init(){baseTitle=document.title;applyFilter(new URLSearchParams(location.search).get('category')||'all');refreshMusic();updateTabStatus();window.dispatchEvent(new CustomEvent('music-request-state'));}
 document.addEventListener('astro:page-load',init);
 document.addEventListener('astro:before-swap',()=>{document.body.style.overflow='';});
 init();
