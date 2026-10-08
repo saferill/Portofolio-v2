@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://syafril.my.id/sitemap.xml
+Sitemap: https://syafril.pages.dev/sitemap.xml
